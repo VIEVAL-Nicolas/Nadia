@@ -1,0 +1,9 @@
+{
+  "items": [
+    { "name": "amulette", "image": "images/amulette.png" },
+    { "name": "grimoire", "image": "images/grimoire.png" },
+    { "name": "anneau", "image": "images/anneau.png" },
+    { "name": "potion", "image": "images/potion.png" },
+    { "name": "bouclier", "image": "images/bouclier.png" }
+  ]
+}

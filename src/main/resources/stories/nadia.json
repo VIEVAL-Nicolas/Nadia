@@ -1,0 +1,37 @@
+{
+  "startNode": "villageDepart",
+  "nodes": {
+    "villageDepart": {
+      "text": "Vous incarnez Thermidor, un apprenti mage. Votre village vient d'être attaqué par la horde de zombies du Prince des Morts. Ils ont en plus enlevé votre future femme. Votre rôle est de regrouper en vous les 7 pouvoirs nécessaires pour vaincre le Prince. Que le jeu commence !! Vous entrez dans votre village et apercevez les ruines qui étaient votre maison. Votre future femme manque à l'appel, que faites-vous ?",
+      "image": "images/ruines.jpg",
+      "choices": [
+        { "text": "Vous partez à sa recherche sur-le-champ.", "type": "fail", "message": "C'est une très mauvaise idée... Vous mourez avant même d'avoir quitté le village." },
+        { "text": "Vous demandez conseil à votre maître.", "type": "next", "target": "maitreMage" },
+        { "text": "Fouiller les ruines.", "type": "next", "target": "visiteRuines" }
+      ]
+    },
+    "maitreMage": {
+      "text": "Mon jeune apprenti, tu es sage d'avoir eu recours à mon aide.",
+      "choices": [
+        { "text": "Renoncer : cette aventure n'est pas faite pour vous !", "type": "fail", "message": "Fin de la démo Echec" },
+        { "text": "En avant vers l'aventure", "type": "victory", "message": "Fin de la démo Victoire" }
+      ]
+    },
+    "visiteRuines": {
+      "text": "Vous décidez d'explorer les ruines de votre maison. Parmi les décombres, vous trouvez un carnet chiffonné et une bourse contenant des cartes et un étrange pendentif.Le carnet semble contenir des indices sur des lieux cachés dans la région.",
+      "image": "images/ruines_int.jpg",
+      "choices": [
+        { "text": "Suivre les inscriptions du carnet.", "type": "next", "target": "maitreMage" },
+        { "text": "Vous étudiez le pendentif.", "type": "next", "target": "prendrePendentif" }
+      ]
+    },
+    "prendrePendentif": {
+      "text": "Vous décidez de prendre le pendentif ?",
+      "image": "images/prendre_pendentif.jpg",
+      "choices": [
+        { "text": "Oui", "type": "next", "target": "maitreMage", "item": "amulette"},
+        { "text": "Non", "type": "next", "target": "maitreMage" }
+      ]
+    }
+  }
+}
